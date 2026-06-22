@@ -99,12 +99,6 @@ resource "aws_security_group" "app_sg" {
   }
 }
 
-# --- Key Pair ---
-# resource "aws_key_pair" "deployer" {
-#   key_name   = "key-pair"
-#   public_key = file(var.public_key_path)
-# }
-
 # --- EC2 Instance ---
 resource "aws_instance" "app_server" {
   ami                    = var.ami_id
